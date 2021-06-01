@@ -1,0 +1,278 @@
+/*  azul clarim */
+:root {
+    --light-blue: #008080;
+    --font-dark: rgb(1, 31, 28)0;
+    --dark-cyan:rgb(0, 102, 102);
+}
+
+/* GLOBAL === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+html {
+    font-size: 93.75%;
+}
+
+body {
+    background: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* *** HEADER == */
+
+header {
+    background: var(--light-blue);
+    padding: 2rem 0 10rem;
+    text-align: center;
+}
+
+#logo {
+    color: var(--font-dark);
+    font-weight: 100;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+/* /* ** TITLES === */
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: normal;
+    color: #232c2b;
+    text-align: center;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* *** LINKS BUTTONS === */
+a {
+    color:var(--dark-cyan);
+    text-decoration: none;
+}
+a:hover {
+    color:rgb(0, 0, 0);
+    
+
+}
+a.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color:var(--dark-cyan);
+    color: rgb(255, 255, 255);
+    border-radius: 0.2rem;
+    padding: 0;
+    cursor: pointer;
+}
+.button.cancel {
+    color: red;
+    border: 2px red solid;
+    border-radius: 0.25rem;
+    height: 50px;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button.cancel:hover {
+    background-color: rgba(209, 16, 16, 0.726);
+    color: white;
+}
+button:hover {
+    background-color: rgb(1, 75, 59);
+    color:rgb(0, 0, 0);
+    border-radius: 0.2rem;
+
+
+}
+/* ** BALANCE === */
+#balance {
+    margin-top: -6rem;
+}
+
+#balance h2 {
+    margin-top: 0;
+    color: #b3e6e1;
+}
+
+/* **** CARDS === */
+.card {
+    padding: 1.5rem 2rem;
+    background: white;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 4rem;
+}
+
+.card.total{
+    background:darkcyan;
+    color: white;
+}
+
+
+/* *** TABLE === */
+table th{
+    background: white;
+    opacity: 0.6;
+    text-align: left;
+    padding: 1rem 2rem;
+
+}
+
+table tbody tr:hover {
+    opacity: 1;
+}
+table tbody tr {
+    opacity:0.7;
+}
+
+table td{
+    background: white;
+    font-weight: normal;    
+    padding: 1rem 1rem;
+
+}
+
+table thead tr td:first-child, 
+table thead tr th:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;    
+
+}
+
+table thead tr td:last-child, 
+table thead tr th:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;    
+
+}
+#transaction {
+    overflow-x: auto;
+    display: grid;
+    width: 100%;
+}
+#data-table {
+    border-spacing: 0 0.5rem;
+}
+
+td.description {
+    color: darkslategray;
+}
+
+td.expense {
+    color: red;
+}
+
+td.income {
+    color: darkblue;
+}
+/* *** MODALS === */
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+
+}
+.modal {
+    background: whitesmoke;
+    padding: 2.4rem;
+    width: 90%;
+    max-width: 500px;
+    z-index: 1;
+}
+
+/* *** FORM ===  */
+
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    margin-top: 0;
+}
+.input-group {
+    padding: 0.8rem;
+}
+
+.input-group small {
+    opacity: 0.5;
+}
+
+input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
+
+ /* *** FOOTER === */
+
+footer {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    opacity: 0.6;
+}
+
+/* ** RESPONSIVE == */
+@media(min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+    #balance {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+}
