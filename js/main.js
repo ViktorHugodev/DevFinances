@@ -10,23 +10,6 @@ const modal = {
     }
 }
 
-// const transaction = [ {    
-//         description: 'Luz',
-//         amount: -50000,
-//         date: '17/05/2021',
-//      },
-//     {
-//         description: 'Internet',
-//         amount: -20000,
-//         date: '17/05/2021',
-
-//     },
-//     {
-//         description: 'Criação WebSite',
-//         amount: 500000,
-//         date: '17/05/2021',
-
-//     }]
 
 const storage = {
     get(){
@@ -81,8 +64,8 @@ const utils = {
         return `${fDate[2]}/${fDate[1]}/${fDate[0]}`
     },
     formatAmount(value) {
-        value = Number(value.replace(/\,\./g, "")) * 100
-        return value
+        value = value * 100
+        return Math.round(value)
     },
     formatCurrency(value) {
         const signal = Number(value) < 0 ? "-" : ""
